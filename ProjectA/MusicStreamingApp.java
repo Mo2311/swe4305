@@ -8,9 +8,9 @@ public class MusicStreamingApp {
 
     // Song class inside MusicStreamingApp class
     static class Song {
-        private String title;
-        private String artist;
-        private int playCount;
+        private final String title;
+        private final String artist;
+        private final int playCount;
 
         // Constructor
         public Song(String title, String artist, int playCount) {
@@ -24,10 +24,6 @@ public class MusicStreamingApp {
             return title;
         }
 
-        public String getArtist() {
-            return artist;
-        }
-
         public int getPlayCount() {
             return playCount;
         }
@@ -39,20 +35,20 @@ public class MusicStreamingApp {
         }
     }
 
-    private static List<Song> songs = new ArrayList<>();
+    private static final List<Song> songs = new ArrayList<>();
 
     public static void main(String[] args) {
         // Sample initial songs
-        songs.add(new Song("Lose Yourself", "Eminem", 500000000));
-        songs.add(new Song("Shape of You", "Ed Sheeran", 2000000000));
-        songs.add(new Song("Blinding Lights", "The Weeknd", 220000000));
-        songs.add(new Song("Someone Like You", "Adele", 1700000000));
-        songs.add(new Song("Havana", "Camila Cabello", 1000000000));
-        songs.add(new Song("Bad Guy", "Billie Eilish", 1000000000));
-        songs.add(new Song("Uptown Funk", "Mark Ronson feat. Bruno Mars", 1200000000));
-        songs.add(new Song("Shallow", "Lady Gaga & Bradley Cooper", 1300000000));
-        songs.add(new Song("Rolling in the Deep", "Adele", 1500000000));
-        songs.add(new Song("God's Plan", "Drake", 1400000000));
+        songs.add(new Song("Lose Yourself", "Eminem", 500));
+        songs.add(new Song("Shape of You", "Ed Sheeran", 200));
+        songs.add(new Song("Blinding Lights", "The Weeknd", 220));
+        songs.add(new Song("Someone Like You", "Adele", 170));
+        songs.add(new Song("Havana", "Camila Cabello", 100));
+        songs.add(new Song("Bad Guy", "Billie Eilish", 100));
+        songs.add(new Song("Uptown Funk", "Mark Ronson feat. Bruno Mars", 120));
+        songs.add(new Song("Shallow", "Lady Gaga & Bradley Cooper", 130));
+        songs.add(new Song("Rolling in the Deep", "Adele", 150));
+        songs.add(new Song("God's Plan", "Drake", 140));
 
         // Scanner to get user input
         Scanner scanner = new Scanner(System.in);
